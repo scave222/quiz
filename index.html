@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Fill in the blank quiz</h1>
+
+
+
+    <script>
+
+        let questions_prompts=["Java is a? (a) Operating system (b) Programming language (c) Compiler (d) Input device" ,
+                        "A Web site's main page is called? (a) Browser page (b) Search page (c) Home page (d) Bookmark" ,
+                        "The basic unit of worksheet into which you enter data in Excel is called? (a) cell (b) ribbon (c) table (d) box ",
+                        "Which of the following is an example of a binary number? (a) A1BCD1 (b) 23456 (c) 005 (d) 100101",
+                        "The process of tranferring files from the internet to your computer is called? (a) uploading  (b) forwarding  (c) FTP  (d) downloading ",
+                        "Computer software includes? (a) Packaged programs (b) Application programs  (c) Operating system programs (d) All of these",
+                        "To move forward through the tabs (a) CTRL+TAB (b) CTRL+SHIFT+TAB (c) SHIFT+TAB (d) None of these ",
+                        "__________is the heart of the computer and this is where all the computing is done (a) Keyboard (b) Mouse (c) CPU (d) Printer "]
+
+        let questionAnswer = ["b", "c", "a", "d", "d", "d", "a", "c"]
+ 
+
+    let name = prompt(`What is your name?`)
+        
+    let score = 0
+    // function quest(){
+    for (var i=0; i < questions_prompts.length; i++){
+          var answer = prompt(`${name} answer in a - d or click "q" to end the quiz \n  ${questions_prompts[i]}`);
+          if (answer.toUpperCase() === questionAnswer[i].toUpperCase()){
+            score += 1;        
+          }     
+        else if(answer.toUpperCase() === "Q" || answer === null ){
+            break;
+        } 
+        
+        }
+        document.write(`${name}! You got ${score} out of  ${questions_prompts.length} correctly`);
+     
+        // }       
+        // quest();
+
+
+
+    </script>
+</body>
+</html>
